@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Flurry.h"
 
 @implementation AppDelegate
 
@@ -14,6 +15,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLog(@"didfinishlaunchingwithoptions");
+    
+    [Flurry startSession:@"J28C2S2TKNRKQDVXJX92"];
     // Override point for customization after application launch.
     return YES;
 }
@@ -44,5 +48,13 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application 
+{
+    NSLog(@"didfinishlaunchingwithoptions");
+    //your code
+}
+
 
 @end
